@@ -1,0 +1,43 @@
+body {
+            margin: 0; 
+            padding: 0; 
+            border: 0;
+            font: 14px/24px Helvetica, Sans-Serif; 
+            color: #7e7e7e;
+            background: #f5f5f5;
+        }
+
+        .container {
+            width: 960px; 
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+            h2 p {
+                text-decoration: none;
+                font-size: 30px;
+                color: #000000;
+            }
+
+        #logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            width: 900px;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #home {
+            text-align: center;
+        }
+
+            #home i {
+                color: #000000;
+            }
