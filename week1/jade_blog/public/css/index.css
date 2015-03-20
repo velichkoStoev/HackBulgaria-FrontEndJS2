@@ -1,0 +1,49 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0; 
+	padding: 0; 
+	border: 0;
+}
+
+body {
+	font: 14px/24px Courier New; 
+	color: #DDDDDD;
+	background: #2F343A;
+}
+
+#container {
+	width: 960px; 
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #80CEB9;
+}
+
+.post-link {
+	margin-bottom: 10px;
+}
+
+.post-info {
+	margin-top: 10px;
+}
+
+h1#title {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+img {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto 
+}
+
+#footer {
+	text-align: center;
+	color: #80CEB9;
+}
