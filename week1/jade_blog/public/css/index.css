@@ -13,11 +13,31 @@ body {
 #container {
 	width: 960px; 
 	margin: 0 auto;
+	line-height: 160d%;
 }
 
-a {
+.post-link a {
 	text-decoration: none;
 	color: #80CEB9;
+}
+
+#blog-navigation a {
+	text-decoration: none;
+	color: #80CEB9;
+}
+
+/*NAVIGATION*/
+ul {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0;
+	text-align: center;
+}
+
+li {
+	display: inline;
+	padding: 10px;
 }
 
 .post-link {
@@ -32,6 +52,10 @@ h1#title {
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+#blog-navigation ul {
+	list-style-positio
 }
 
 img {
