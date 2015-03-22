@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-  res.render('index', { name: 'Blogg!', title: 'Ultra cool blog'});
+  res.render('index');
 })
 
 // listen for files: /post -> /views/post.jade
