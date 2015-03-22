@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 header {
     background: #aaa;
     position: fixed;
@@ -17,15 +21,11 @@ header {
         line-height: 60px;
     }
 
-section {
-    margin-top: 50px;
+section#content {
+    padding-top: 70px;
     width: 70%;
     height: 100%;
     display: block;
-}
-
-#content {
-    display: inline-block;
 }
 
 .sidebar {
