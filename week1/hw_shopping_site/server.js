@@ -1,18 +1,20 @@
 var express = require('express')
 var fs = require("fs");
+var products = require("./products.json");
+
+
 var app = express()
 
 app.use(express.static('public'));
 app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {products: products});
 })
 
-// listen for files: /post -> /views/post.jade
 app.get("/:fileName", function(req, res, next){
-  if(req.params && req.params.fileName && fs.existsSync(__dirname+"/views/"+req.params.fileName+".jade")){
-    res.render(req.params.fileName);
+  if(req.params && req.params.fileName && fs.existsSync(__dirname+"/views/product.jade")){
+    res.render('product', {product: products[req.params.fileName]});
   } else {
     next();
   }

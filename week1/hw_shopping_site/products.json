@@ -1,0 +1,22 @@
+{
+    "book1": {
+        "title": "I, Robot",
+        "author": "Isaac Asimov",
+        "description": "The three laws of Robotics: 1) A robot may not injure a human being or, through inaction, allow a human being to come to harm 2) A robot must obey orders givein to it by human beings except where such orders would conflict with the First Law. 3) A robot must protect its own existence as long as such protection does not conflict with the First or Second Law. With these three, simple directives, Isaac Asimov changed our perception of robots forever when he formulated the laws governing their behavior. In I, Robot, Asimov chronicles the development of the robot through a series of interlinked stories: from its primitive origins in the present to its ultimate perfection in the not-so-distant future--a future in which humanity itself may be rendered obsolete. Here are stories of robots gone mad, of mind-read robots, and robots with a sense of humor. Of robot politicians, and robots who secretly run the world--all told with the dramatic blend of science fact and science fiction that has become Asmiov's trademark. ",
+        "price": "10.99$"
+    },
+
+    "book2": {
+        "title": "Do Androids Dream of Electric Sheep?",
+        "author": "Philip K. Dick",
+        "description": "A final, apocalyptic, world war has killed millions, driving entire species into extinction and sending the majority of mankind off-planet. Those who remain, venerate all remaining examples of life, and owning an animal of your own is both a symbol of status and a necessity. For those who can't afford an authentic animal, companies build incredibly realistic simulacrae: horses, birds, cats, sheep . . . even humans.",
+        "price": "12.59$"
+    },
+
+    "book3": {
+        "title": "Neuromancer",
+        "author": "William Gibson",
+        "description": "The Matrix is a world within the world, a global consensus- hallucination, the representation of every byte of data in cyberspace . . . Case had been the sharpest data-thief in the business, until vengeful former employers crippled his nervous system. But now a new and very mysterious employer recruits him for a last-chance run. The target: an unthinkably powerful artificial intelligence orbiting Earth in service of the sinister Tessier-Ashpool business clan. With a dead man riding shotgun and Molly, mirror-eyed street-samurai, to watch his back, Case embarks on an adventure that ups the ante on an entire genre of fiction.",
+        "price": "9.95$"
+    }
+}
