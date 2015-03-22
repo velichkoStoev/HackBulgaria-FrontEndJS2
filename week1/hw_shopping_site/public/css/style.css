@@ -1,0 +1,42 @@
+header {
+    background: #aaa;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 60px;
+}
+
+    header h1 {
+        font-size: 32px;
+        margin: 0px;
+        margin-left: 20px; 
+        padding: 0px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+section {
+    margin-top: 50px;
+    width: 70%;
+    height: 100%;
+    display: block;
+}
+
+#content {
+    display: inline-block;
+}
+
+.sidebar {
+    background: #ccc;
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    position: fixed;
+    top: 44px;
+    right: 0;
+    bottom: 0;
+    padding: 10px;  
+    list-style: none; 
+}
