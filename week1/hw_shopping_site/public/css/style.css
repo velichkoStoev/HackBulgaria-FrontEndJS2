@@ -50,3 +50,9 @@ section#content {
     padding: 10px;  
     list-style: none; 
 }
+
+.product-info {
+    width: 400px;
+    height: auto;
+    float: left;
+}
