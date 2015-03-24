@@ -1,5 +1,10 @@
+body {
+    font: 14px/24px Courier New; 
+}
+
 a {
     text-decoration: none;
+    color: #330000;
 }
 
 img {
@@ -8,7 +13,7 @@ img {
 }
 
 header {
-    background: #aaa;
+    background: #3399CC;
     position: fixed;
     left: 0;
     top: 0;
@@ -34,7 +39,7 @@ section#content {
 }
 
 .sidebar {
-    background: #ccc;
+    background: #3399CC;
     width: 20%;
     height: 100%;
     display: inline-block;
