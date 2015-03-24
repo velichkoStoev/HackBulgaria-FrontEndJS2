@@ -2,6 +2,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    height: 300px;
+    width: auto;
+}
+
 header {
     background: #aaa;
     position: fixed;

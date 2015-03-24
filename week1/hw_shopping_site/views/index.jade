@@ -3,4 +3,7 @@ block content
     each product, id in products
         .product-info
             h2.product-title: a(href="/" + id   )= product.title
+            img(src=product.cover)
+            p.product-author= product.author
             p.product-info= product.description
+            p.product-price= product.price
