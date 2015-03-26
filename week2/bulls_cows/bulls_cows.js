@@ -14,13 +14,20 @@ promptNumber();
 function promptNumber(){
     prompt.get(['input'], function (err, result) {
         
-        var bullsCows = getBullsAndCows(numberStr, result.input);
-        if(bullsCows['bulls'] == 4){
-            console.log('Success');
+        if(validateInput(result.input)){
+            var bullsCows = getBullsAndCows(numberStr, result.input);
+            if(bullsCows['bulls'] == 4){
+                console.log('Success');
+                return;
+            }else{
+                console.log('Bulls: ' + bullsCows['bulls'] + '| Cows: ' + bullsCows['cows']);
+                promptNumber();
+            }
         }else{
-            console.log('Bulls: ' + bullsCows['bulls'] + '| Cows: ' + bullsCows['cows']);
+            console.log('Your input is not valid - should be 4 unique digits!');
             promptNumber();
-        }
+        }    
+
     });
 }
 
@@ -66,3 +73,18 @@ function generateNumberWithUniqueDigits(){
     }
 }
 
+function validateInput(input){
+    var regex = /^\d{4}$/;
+
+    if(!regex.test(input)){
+        return false;
+    }
+
+    for(var i=0; i<4; i++){
+        if(input.split(input[i]).length !== 2){
+            return false;
+        }
+    }
+
+    return true;
+}
