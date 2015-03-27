@@ -9,6 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "prompt": "~0.2.14"
+    "prompt": "~0.2.14",
+    "jsonfile": "~2.0.0"
   }
 }
