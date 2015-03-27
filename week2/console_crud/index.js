@@ -35,8 +35,11 @@ function getOption(){
             }case 7:{
                 saveData();
                 break;
+            }case 8:{
+                search();
+                break;
             }
-            case 8:{
+            case 9:{
                 console.log("Quiting ...");
             }
         }       
@@ -53,7 +56,8 @@ function promptMenu(){
     console.log("5. Update");
     console.log("6. Load data");
     console.log("7. Save data");
-    console.log("8. Quit");
+    console.log("8. Search");
+    console.log("9. Quit");
 }
 
 function showUserInfo(user){
@@ -146,6 +150,26 @@ function saveData(){
     getOption();
 }
 
+function search(){
+    console.log("Searching user ...");
+    console.log("Input keyword: ");
+
+    var results = [];
+
+    prompt.get(['keyword'], function (err, result) {
+       for(var i in users){
+           if(users[i].email.indexOf(result.keyword) != -1 || users[i].name.indexOf(result.keyword) != -1){
+                results.push(users[i]);
+           }   
+       }
+
+       for(var j in results){
+           showUserInfo(results[j]);
+       }
+
+       getOption();
+    });    
+}
 //code
 var users = [
     {
