@@ -1,4 +1,7 @@
 var prompt = require('prompt');
+var jf = require('jsonfile');
+var util = require('util');
+
 prompt.start();
 
 //functions
@@ -26,8 +29,14 @@ function getOption(){
             case 5:{
                 update();
                 break;
+            }case 6:{
+                loadData();
+                break;
+            }case 7:{
+                saveData();
+                break;
             }
-            case 6:{
+            case 8:{
                 console.log("Quiting ...");
             }
         }       
@@ -42,7 +51,9 @@ function promptMenu(){
     console.log("3. Get");
     console.log("4. Remove");
     console.log("5. Update");
-    console.log("6. Quit");
+    console.log("6. Load data");
+    console.log("7. Save data");
+    console.log("8. Quit");
 }
 
 function showUserInfo(user){
@@ -119,6 +130,20 @@ function update(){
            }
        }
     });
+}
+
+function loadData(){
+    file_name = 'data.json'
+    jf.readFile(file_name, function(err, obj) {
+        users = obj;
+    });
+    getOption();
+}
+
+function saveData(){
+    var file_name = 'data.json';
+    jf.writeFileSync(file_name, users);
+    getOption();
 }
 
 //code
