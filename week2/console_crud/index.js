@@ -1,22 +1,7 @@
 var prompt = require('prompt');
 prompt.start();
 
-var users = [
-    {
-        id: "1",
-        name: "John",
-        email: "a@a.com"
-    },
-
-    {
-        id: "2",
-        name: "Gosho",
-        email: "yeah@bg.com"
-    }
-];
-
-getOption(); 
-
+//functions
 function getOption(){
     promptMenu();
     console.log('Choice:');  
@@ -60,6 +45,13 @@ function promptMenu(){
     console.log("6. Quit");
 }
 
+function showUserInfo(user){
+    console.log("ID: " + user['id']);
+    console.log("Name: " + user['name']);
+    console.log("E-mail: " + user['email']);
+    console.log();
+}
+
 function add(){
     console.log("Adding user ...");
 
@@ -81,13 +73,6 @@ function list(){
         showUserInfo(users[i]);
     }
     getOption();
-}
-
-function showUserInfo(user){
-    console.log("ID: " + user['id']);
-    console.log("Name: " + user['name']);
-    console.log("E-mail: " + user['email']);
-    console.log();
 }
 
 function get(){
@@ -135,3 +120,20 @@ function update(){
        }
     });
 }
+
+//code
+var users = [
+    {
+        id: "1",
+        name: "John",
+        email: "a@a.com"
+    },
+
+    {
+        id: "2",
+        name: "Gosho",
+        email: "yeah@bg.com"
+    }
+];
+
+getOption(); 
