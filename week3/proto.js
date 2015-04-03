@@ -78,6 +78,31 @@ Array.prototype.sample = function(){
     return this[Math.floor(Math.random()*this.length)]
 }
 
+Array.prototype.take = function(n){
+    if(n > this.length){
+        return this.slice();
+    }
+    return this.slice(0, n);
+}
+
+Array.prototype.drop = function(n){
+    if(n > this.length){
+        return [];
+    }
+    return this.slice(n, this.length);
+}
+
+Array.prototype.dedup = function(){
+    var newArray = [];
+    this.forEach(function(element){
+        if(newArray.indexOf(element) === -1){
+            newArray.push(element);
+        }
+    });
+
+    return newArray;
+}
+
 // console.log('javascript'.capitalize());
 // console.log('     '.isBlank());
 // console.log("This is    a   very   clever   sentence!".words());
@@ -101,4 +126,14 @@ Array.prototype.sample = function(){
 // console.log([1,2,3].sum());
 // console.log([1,2,3].product());
 // console.log([false, true, 0, "", null, 5, undefined, NaN, "JavaScript"].compact());
-console.log([1,2,4].sample());
+// console.log([1,2,4].sample());
+
+// var a = [].range(1, 10);
+// console.log(a.take(3));
+// console.log(a.drop(5));
+// console.log(a.take(100));
+// console.log(a.drop(100));
+// console.log(a);
+
+console.log([1, 1, 1, 1, 1].dedup());
+
