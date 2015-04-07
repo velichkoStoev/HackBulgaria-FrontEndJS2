@@ -14,11 +14,11 @@ window.onload = function(){
     btnTeamB.appendChild(btnTextB);
 
     var paragraphTeamA = document.createElement("p");    
-    var pTextA = document.createTextNode("Team A score: ");
+    var pTextA = document.createTextNode("Team A score: " + scoreA);
     paragraphTeamA.appendChild(pTextA);
     
     var paragraphTeamB = document.createElement("p");   
-    var pTextB = document.createTextNode("Team B score: ");
+    var pTextB = document.createTextNode("Team B score: " + scoreB);
     paragraphTeamB.appendChild(pTextB);
 
     div.className = 'container';
