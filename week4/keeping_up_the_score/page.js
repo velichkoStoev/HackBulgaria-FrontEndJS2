@@ -21,20 +21,32 @@ window.onload = function(){
     var pTextB = document.createTextNode("Team B score: ");
     paragraphTeamB.appendChild(pTextB);
 
-    div.appendChild(paragraphTeamA); 
-    div.appendChild(btnTeamA); 
-    div.appendChild(paragraphTeamB); 
-    div.appendChild(btnTeamB); 
+    div.className = 'container';
+
+    var divA = document.createElement("div");
+    divA.appendChild(paragraphTeamA);
+    divA.appendChild(btnTeamA);
+
+    var divB = document.createElement("div");
+    divB.appendChild(paragraphTeamB);
+    divB.appendChild(btnTeamB);
+
+    div.appendChild(divA);
+    div.appendChild(divB);
+
+    divA.style.float = 'left';
+    divA.style.marginRight = '25px';
+    divB.style.float = 'left';
 
     btnTeamA.onclick = function(){
         scoreA += 1;
         var p = document.getElementsByTagName("p")[0];
-        p.innerHTML = "Team A score: " + scoreA;
+        p.textContent = "Team A score: " + scoreA;
     }
 
     btnTeamB.onclick = function(){
         scoreB += 1;
         var p = document.getElementsByTagName("p")[1];
-        p.innerHTML = "Team B score: " + scoreB;
+        p.textContent = "Team B score: " + scoreB;
     }
 }
