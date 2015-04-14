@@ -1,9 +1,8 @@
 $( document ).ready(function() {
-    var counter = 1;
-
     $('#add-btn').click(function(){
         var task = $('#task-input').val();
-        $('#tasks-field').append('<p>' + counter + '. ' + task + '</p>');
-        counter++;
+        var taskCheckbox = $('<label />').html(task).prepend($('<input/>').attr({ type: 'checkbox'}));
+        $('#tasks-field').append(taskCheckbox);
+        $('#tasks-field').append('<br>');
     });
 });
