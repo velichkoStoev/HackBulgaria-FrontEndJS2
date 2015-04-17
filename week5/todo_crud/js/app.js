@@ -26,18 +26,33 @@ var TodoApp = (function() {
     displayList();
   };
 
+  var deleteTask = function(id){
+    id = parseInt(id);
+
+    tasks = tasks.filter(function(task){
+      return task['id'] !== id;
+    });
+
+    displayList();
+  };
+
   var displayList = function(container) {
     $('#container ol').empty();
     tasks.forEach(function(task){
-      var liElement = $('<li>' + task['name'] + '</li>')
-      var checkbox = $('<input type="checkbox" id="' + task['id'] +'">');
-      // var button = $('<button type="button">Click Me!</button>');
+      var liElement = $('<li id="' + task['id'] +'">' + task['name'] + '</li>')
+      var checkbox = $('<input type="checkbox">');
+      var button = $('<button type="button">Delete</button>');
       
       checkbox.click(function(){
-        finishTask($(this).attr('id'));
+        finishTask($(this).parent().attr('id'));
+      });
+
+      button.click(function(){
+        deleteTask($(this).parent().attr('id'));
       });
 
       liElement.prepend(checkbox);
+      liElement.prepend(button);
 
       if(task['finished'] === true){
         liElement.addClass('finished');
