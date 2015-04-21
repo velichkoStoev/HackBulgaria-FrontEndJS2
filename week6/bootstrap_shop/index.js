@@ -1,5 +1,6 @@
-var express = require('express')
-var app = express()
+var express = require('express');
+var fs = require("fs");
+var app = express();
 
 app.use(express.static('public'));
 app.set('view engine', 'jade');
@@ -15,7 +16,7 @@ app.get("/:fileName", function(req, res, next){
     var fileName = req.params.fileName.replace(".html","");
 
     // if jade file exists
-    if(fs.existsSync(__dirname+"public/views/"+fileName+".jade")){
+    if(fs.existsSync(__dirname+"/views/"+fileName+".jade")){
       res.render(fileName);
     // if post is in posts
     } else {
