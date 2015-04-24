@@ -1,15 +1,28 @@
 extends ./layout.jade
 
 block content
-    .col-md-3.col-sm-4.col-xs-12 
-        .thumbnail
-            img(src="https://findnearest.com/image/clients/doge.jpg")
-            .caption
-                h3 Doge
-                p wow, such website, much design
-    .col-md-3.col-sm-4.col-xs-12 
-        .thumbnail
-            img(src="https://findnearest.com/image/clients/doge.jpg")
-            .caption
-                h3 Doge
-                p wow, such website, much design
+   .col-xs-12
+        table.table.table-hover
+            thead
+                tr 
+                    th Product name
+                    th Description
+                    th Price
+                    th Count
+            tbody
+                tr 
+                    td Cool doge
+                    td Much cool
+                    td 999$
+                    td 1
+                tr 
+                    td Cool cool doge
+                    td Much more cool
+                    td 1000$
+                    td 1
+                tr.info 
+                    td Total
+                    td 
+                    td 1999$
+                    td 2
+
