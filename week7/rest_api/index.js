@@ -65,6 +65,7 @@ app.post('/students', function(req, res){
 // GET students/:id
 app.get('/students/:id', function(req, res){
     var id = req.params.id;
+
     for(var i = 0; i < students.length; i+= 1){
         if(students[i].id == id){
             var student = students[i];
@@ -90,6 +91,7 @@ app.put('/students/:id', function(req, res){
         }
     }
 
+    student.id = req.body.id || student.id; 
     student.name = req.body.name || student.name;
     student.email = req.body.email || student.email;
     student.gitRepo = req.body.gitRepo || student.gitRepo;
@@ -97,7 +99,7 @@ app.put('/students/:id', function(req, res){
 
     res.jsonp({
         msg: 'student with id of ' + id + ' updated',
-        data: students[id]
+        data: student
     });
 
 });
@@ -117,7 +119,6 @@ app.delete('/students/:id', function(req, res){
     }
 
     if(isDeleted){
-       delete students[id];
        msg = 'student with id of ' + id + ' deleted';
     }else{
        msg = 'student with id of ' + id + ' does not exist';
