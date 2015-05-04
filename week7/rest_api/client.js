@@ -40,7 +40,7 @@ function listStudents(students){
 
 function buildStudentEntry(student){
     var tr = $('<tr>');
-    tr.append('<td>' + student.id +'</td>');
+    tr.append('<td><a href="http://127.0.0.1:1337/students/' + student.id +'">' + student.id + '</a></td>');
     tr.append('<td>' + student.name +'</td>');
     tr.append('<td>' + student.email +'</td>');
 
