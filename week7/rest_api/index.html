@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title of the document</title>
+    <title>REST API Client</title>
+    <link rel="stylesheet" type="text/css" href="public/lib/bootstrap/dist/css/bootstrap.css">
 </head>
 
 <body>
-    <form action="/users" method="POST">
+    <form action="/students" method="POST">
         <input type="text" name="id" id="id" placeholder="enter id">
         <br>
         <input type="text" name="name" id="name" placeholder="enter name">
@@ -15,10 +16,25 @@
         <br>
         <button type="button" id="btnSubmit">POST</button>
     </form> 
-    <button type="button" id="btnList">Click Me!</button>
+    <div class="container-fluid">
+        <h3>Students Information</h3>
+
+        <table class="table">
+            <thead>
+              <tr class="active">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody id="students_list">
+            </tbody>
+        </table>
+
+        <button type="button" id="btnList" class="btn btn-link">Load students</button>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="client.js"></script>
 </body>
-
 </html>
