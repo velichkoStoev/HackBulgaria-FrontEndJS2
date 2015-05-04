@@ -13,24 +13,20 @@ function getStudents(){
 }
 
 function postStudents(){
-    var student_id = $('#id').val();
-    var student_name = $('#name').val();
-    var student_email = $('#email').val();
+    var student = {
+        id: $('#id').val(),
+        name: $('#name').val(),
+        email: $('#email').val()
+    };
 
     $.ajax({    
         method: 'post',
         url: "http://127.0.0.1:1337/students/",
         dataType: 'json',
         data: {
-            id: student_id,
-            name: student_name,
-            email: student_email
-        },
-        success: function(data){
-            alert('Success!');
-        },
-        error: function(request, status, error){
-            alert(error);
+            id: student.id,
+            name: student.name,
+            email: student.email
         }
     });
 }

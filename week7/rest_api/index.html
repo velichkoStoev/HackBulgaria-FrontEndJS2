@@ -7,15 +7,6 @@
 </head>
 
 <body>
-    <form action="/students" method="POST">
-        <input type="text" name="id" id="id" placeholder="enter id">
-        <br>
-        <input type="text" name="name" id="name" placeholder="enter name">
-        <br>
-        <input type="email" name="email" id="email" placeholder="enter email">
-        <br>
-        <button type="button" id="btnSubmit">POST</button>
-    </form> 
     <div class="container-fluid">
         <h3>Students Information</h3>
 
@@ -32,6 +23,28 @@
         </table>
 
         <button type="button" id="btnList" class="btn btn-link">Load students</button>
+
+        <div class="container-fluid">
+            <form>
+                <h4> Add new student </h4>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ID</label>
+                    <input type="text" class="form-control" id="id" placeholder="Enter ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputStudentName">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter email">
+                </div>
+
+                <button type="button" id="btnSubmit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
