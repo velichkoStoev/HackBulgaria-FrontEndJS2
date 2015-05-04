@@ -4,8 +4,7 @@ function getStudents(){
         method: 'get',
         dataType: 'jsonp',
         success: function(data){
-            var result = JSON.stringify(data);
-            alert(result);
+            listStudents(data);
         },
         error: function(request, status, error){
             alert(error);
@@ -28,13 +27,28 @@ function postStudents(){
             email: student_email
         },
         success: function(data){
-            var result = JSON.stringify(data);
-            alert(result);
+            alert('Success!');
         },
         error: function(request, status, error){
             alert(error);
         }
     });
+}
+
+function listStudents(students){
+    $("#students_list").empty();
+    students.forEach(function(student){
+        buildStudentEntry(student);
+    });
+}
+
+function buildStudentEntry(student){
+    var tr = $('<tr>');
+    tr.append('<td>' + student.id +'</td>');
+    tr.append('<td>' + student.name +'</td>');
+    tr.append('<td>' + student.email +'</td>');
+
+    $("#students_list").append(tr);
 }
 
 $( document ).ready(function() {
