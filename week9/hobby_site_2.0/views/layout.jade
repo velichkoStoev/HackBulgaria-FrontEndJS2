@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title One Fuckin Piece
+    link(rel="stylesheet", type="test/css", href="lib/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet", type="test/css", href="lib/font-awesome/css/font-awesome.css")
+  body
+    include ./partials/nav.jade   
+
+    .container-fluid
+        .row
+            .col-xs-3
+                include ./partials/sidebar.jade
+            .col-xs-9
+                block content
