@@ -1,0 +1,33 @@
+/*general styling*/
+
+a {
+    color: #2F343A;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+body {
+    background-color: #DDDDDD;
+}
+
+/*nav-bar*/
+
+
+
+.navbar.navbar-default {
+    background-color: #2F343A;
+    margin-bottom: 10px;
+}
+
+.navbar-default .navbar-brand {
+    color: #DDDDDD;
+}
+
+/*gallery thumbnails*/
+
+.thumbnail {
+    height: 220px;
+    overflow: auto;
+}
