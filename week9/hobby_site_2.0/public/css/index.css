@@ -22,7 +22,6 @@ body {
 
 /*nav-bar*/
 
-
 .navbar.navbar-default {
     background-color: #2F343A;
     margin-bottom: 10px;
@@ -30,6 +29,22 @@ body {
 
 .navbar-default .navbar-brand {
     color: #DDDDDD;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+    color: #FFF;
 }
 
 /*gallery thumbnails*/
