@@ -12,8 +12,15 @@ body {
     background-color: #DDDDDD;
 }
 
-/*nav-bar*/
+/*banner*/
 
+#banner {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/*nav-bar*/
 
 
 .navbar.navbar-default {
