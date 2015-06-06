@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular test</title>
+</head>
+<body ng-app='mainApp'>
+    <h1>Testing Angular</h1>
+
+    <a ui-sref="about">About</a>
+    <a ui-sref="contact">Contact</a>
+    <div id="main">
+        <div ui-view></div>
+    </div>
+
+    <footer>Plovdiv 4ever!</footer>
+
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script> 
+    <script type="text/javascript" src="app.js"></script> 
+</body>
+</html>
